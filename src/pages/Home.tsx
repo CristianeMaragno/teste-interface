@@ -13,15 +13,15 @@ function Home() {
         <img
           src={fachada}
           alt="Fachada do Museu Casa de Portinari"
-          className="h-[calc(100vh-4rem)] w-full object-cover"
+          className="h-[calc(100vh-5rem)] w-full object-cover"
         />
         <Button
           asChild
           size="lg"
-          className="absolute right-6 top-6 gap-2 rounded-full bg-orange-600 px-6 py-6 text-base font-semibold text-white shadow-xl shadow-black/30 hover:bg-orange-700 hover:shadow-2xl"
+          className="absolute right-10 top-10 gap-3 rounded-full bg-orange-600 px-8 py-7 text-lg font-semibold text-white shadow-xl shadow-black/30 hover:bg-orange-700 hover:shadow-2xl"
         >
           <Link to="/visita-virtual/carregando">
-            <Video className="h-5 w-5" />
+            <Video className="h-6 w-6" />
             Faça uma visita ao museu virtual
           </Link>
         </Button>

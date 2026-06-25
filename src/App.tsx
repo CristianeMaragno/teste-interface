@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import Home from "@/pages/Home";
+import PaginaNaoPrototipada from "@/pages/PaginaNaoPrototipada";
 import PortinariProfile from "@/pages/PortinariProfile";
 import Visite from "@/pages/Visite";
 import BoasVindas from "@/pages/visita-virtual/BoasVindas";
@@ -18,6 +19,7 @@ function App() {
       <Route path="/visita-virtual/idioma" element={<SelecaoIdioma />} />
       <Route path="/visita-virtual/boas-vindas" element={<BoasVindas />} />
       <Route path="/visita-virtual/tour" element={<Tour />} />
+      <Route path="*" element={<PaginaNaoPrototipada />} />
     </Routes>
   );
 }

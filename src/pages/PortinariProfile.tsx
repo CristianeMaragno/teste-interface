@@ -36,10 +36,10 @@ function PortinariProfile() {
     <div className="flex min-h-screen flex-col">
       <Toolbar />
 
-      <div className="grid grid-cols-[80%_20%] gap-16 px-16 py-12">
+      <div className="grid grid-cols-[70%_30%] gap-16 px-28 py-14">
         <div className="min-w-0 p-16">
           <Breadcrumb>
-            <BreadcrumbList>
+            <BreadcrumbList className="text-lg">
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link to="/">Início</Link>
@@ -57,39 +57,45 @@ function PortinariProfile() {
             collapsible
             value={activeSection}
             onValueChange={(value) => value && setActiveSection(value)}
-            className="mt-4"
+            className="mt-6"
           >
             <AccordionItem value="identidade">
-              <AccordionTrigger>Identidade</AccordionTrigger>
+              <AccordionTrigger className="text-xl">
+                Identidade
+              </AccordionTrigger>
               <AccordionContent>
-                <p className="leading-relaxed text-muted-foreground">
+                <p className="text-lg leading-relaxed text-muted-foreground">
                   {placeholderText}
                 </p>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="biografia">
-              <AccordionTrigger>Biografia</AccordionTrigger>
+              <AccordionTrigger className="text-xl">
+                Biografia
+              </AccordionTrigger>
               <AccordionContent>
-                <p className="leading-relaxed text-muted-foreground">
+                <p className="text-lg leading-relaxed text-muted-foreground">
                   {placeholderText}
                 </p>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="linha-do-tempo">
-              <AccordionTrigger>Linha do tempo</AccordionTrigger>
+              <AccordionTrigger className="text-xl">
+                Linha do tempo
+              </AccordionTrigger>
               <AccordionContent>
-                <p className="leading-relaxed text-muted-foreground">
+                <p className="text-lg leading-relaxed text-muted-foreground">
                   {placeholderText}
                 </p>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="fotos">
-              <AccordionTrigger>Fotos</AccordionTrigger>
+              <AccordionTrigger className="text-xl">Fotos</AccordionTrigger>
               <AccordionContent>
-                <p className="leading-relaxed text-muted-foreground">
+                <p className="text-lg leading-relaxed text-muted-foreground">
                   {placeholderText}
                 </p>
               </AccordionContent>
@@ -97,7 +103,7 @@ function PortinariProfile() {
           </Accordion>
         </div>
 
-        <aside className="flex flex-col gap-6 border-l p-16">
+        <aside className="flex flex-col gap-8 border-l p-16">
           <div>
             <div className="aspect-square w-full overflow-hidden rounded-md border bg-muted">
               <img
@@ -106,22 +112,22 @@ function PortinariProfile() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="mt-3 space-y-1">
-              <p className="text-sm font-bold">Nome completo</p>
-              <p className="text-sm font-bold">Nascimento</p>
-              <p className="text-sm font-bold">Informação</p>
+            <div className="mt-4 space-y-2">
+              <p className="text-lg font-bold">Nome completo</p>
+              <p className="text-lg font-bold">Nascimento</p>
+              <p className="text-lg font-bold">Informação</p>
             </div>
           </div>
 
           <nav>
-            <ul className="mt-2 space-y-2">
+            <ul className="mt-2 space-y-3">
               {sections.map((section) => (
                 <li key={section.key}>
                   <button
                     type="button"
                     onClick={() => setActiveSection(section.key)}
                     className={cn(
-                      "text-left text-sm text-muted-foreground transition-colors hover:text-foreground",
+                      "text-left text-lg text-muted-foreground transition-colors hover:text-foreground",
                       activeSection === section.key &&
                         "font-semibold text-foreground"
                     )}

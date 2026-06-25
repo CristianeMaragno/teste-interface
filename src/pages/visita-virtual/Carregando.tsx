@@ -15,9 +15,9 @@ function Carregando() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-white">
-      <div className="flex items-center gap-3">
-        <span className="text-lg font-medium">Carregando...</span>
-        <Loader2 className="h-5 w-5 animate-spin" />
+      <div className="flex items-center gap-4">
+        <span className="text-2xl font-medium">Carregando...</span>
+        <Loader2 className="h-7 w-7 animate-spin" />
       </div>
     </div>
   );
